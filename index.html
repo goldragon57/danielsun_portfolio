@@ -936,12 +936,12 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
     </div>
     <div class="testimonial-card reveal reveal-delay-1">
       <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="testimonial-text">"We needed a full-stack developer who could handle both our e-commerce frontend and complex backend integrations. Daniel delivered a polished, high-performance storefront that boosted our online sales significantly."</p>
+      <p class="testimonial-text">"We needed a full-stack developer who could handle both our e-commerce frontend and complex backend integrations. Daniel delivered a polished, high-performance storefront that boosted our online sales."</p>
       <div class="testimonial-author"><div class="testimonial-avatar">EP</div><div class="testimonial-info"><h4>Emma Parker</h4><p>Product Manager, Rosewood Pet</p></div></div>
     </div>
     <div class="testimonial-card reveal reveal-delay-2">
       <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="testimonial-text">"Daniel designed our IoT monitoring dashboard connecting 200+ industrial sensors via MQTT and WebSocket. Real-time data visualization, predictive alerts — he delivered a production-grade system on schedule."</p>
+      <p class="testimonial-text">"Daniel designed our IoT monitoring dashboard connecting 200+ industrial sensors via MQTT and WebSocket. Real-time data visualization and predictive alerts, all delivered on schedule."</p>
       <div class="testimonial-author"><div class="testimonial-avatar">AT</div><div class="testimonial-info"><h4>Akira Tanaka</h4><p>VP Engineering, SkyWatch IoT</p></div></div>
     </div>
   </div>
@@ -958,19 +958,11 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
       <div class="contact-methods">
         <div class="contact-method">
           <div class="contact-method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="contact-method-label">Email</div><div class="contact-method-value">daniel@example.com</div></div>
+          <div><div class="contact-method-label">Email</div><div class="contact-method-value">g2902188@gmail.com</div></div>
         </div>
         <div class="contact-method">
           <div class="contact-method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
           <div><div class="contact-method-label">Location</div><div class="contact-method-value">Available Worldwide (Remote)</div></div>
-        </div>
-        <div class="contact-method">
-          <div class="contact-method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-          <div><div class="contact-method-label">LinkedIn</div><div class="contact-method-value">linkedin.com/in/daniel</div></div>
-        </div>
-        <div class="contact-method">
-          <div class="contact-method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
-          <div><div class="contact-method-label">GitHub</div><div class="contact-method-value">github.com/daniel</div></div>
         </div>
       </div>
     </div>
@@ -987,7 +979,8 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
         <div class="form-group"><label>Timeline</label><select><option value="">Select timeline...</option><option>1 - 3 Months</option><option>3 - 6 Months</option><option>6 - 12 Months</option><option>Ongoing</option></select></div>
       </div>
       <div class="form-group"><label>Project Details</label><textarea placeholder="Tell me about your project, goals, and any specific requirements..."></textarea></div>
-      <button class="form-submit">Send Message <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:8px"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+      <button class="form-submit" onclick="handleSubmit(event)">Send Message <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:8px"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+      <div class="form-success" style="display:none; margin-top:16px; padding:16px 24px; border-radius:12px; background:rgba(52,211,153,0.1); border:1px solid rgba(52,211,153,0.3); color:var(--accent-emerald); font-size:0.9rem; font-weight:500;">Thanks for reaching out! We will reply soon.</div>
     </div>
   </div>
 </section>
@@ -1234,6 +1227,15 @@ window.addEventListener('resize', () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   particleMaterial.uniforms.uPixelRatio.value = renderer.getPixelRatio();
 });
+
+// CONTACT FORM
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target.closest('.contact-form');
+  const msg = form.querySelector('.form-success');
+  e.target.style.display = 'none';
+  msg.style.display = 'block';
+}
 
 // PORTFOLIO PAGINATION
 const pageButtons = document.querySelectorAll('.page-btn');
