@@ -211,6 +211,13 @@ nav.scrolled { border-bottom-color: var(--border-subtle); background: rgba(10,10
 .project-info p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px; }
 .project-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .project-tech span { padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 500; background: var(--bg-tertiary); color: var(--text-muted); }
+.project-card[hidden] { display: none; }
+.project-card.fade-in { animation: cardFadeIn 0.4s ease forwards; }
+@keyframes cardFadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.projects-pagination { display: flex; justify-content: center; gap: 12px; margin-top: 40px; }
+.page-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-subtle); background: var(--bg-card); color: var(--text-secondary); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all var(--transition-fast); }
+.page-btn:hover { border-color: var(--accent-primary); color: var(--accent-primary); }
+.page-btn.active { background: var(--accent-primary); border-color: var(--accent-primary); color: #fff; }
 
 /* EXPERIENCE */
 #experience { background: var(--bg-secondary); }
@@ -605,8 +612,155 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
     <p class="section-desc">A curated selection of projects showcasing expertise across AI, web development, blockchain, computer vision, and immersive 3D.</p>
   </div>
   <div class="projects-grid">
-    <a href="https://izumi.finance/trade/swap/" target="_blank" class="project-card reveal">
-      <div class="project-preview" style="background: linear-gradient(135deg, #1a1040, #2d1b69);">
+    <!-- Page 1 -->
+    <a href="https://clientain.com/" target="_blank" class="project-card" data-page="1">
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/clientain.jpg" alt="Clientain" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category web">SaaS</span>
+      </div>
+      <div class="project-info">
+        <h3>Clientain</h3>
+        <p>Client management SaaS platform for agencies and freelancers, featuring project tracking, invoicing, and client communication tools.</p>
+        <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Express.js</span><span>Docker</span></div>
+      </div>
+    </a>
+    <a href="https://auto-trade-sand.vercel.app/" target="_blank" class="project-card" data-page="1">
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/auto-trade-sand.jpg" alt="Auto Trade" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category ai">AI Trading</span>
+      </div>
+      <div class="project-info">
+        <h3>Auto Trade</h3>
+        <p>Automated trading dashboard with real-time market data, ML-powered portfolio tracking, and configurable trading strategies for multiple asset classes.</p>
+        <div class="project-tech"><span>Next.js</span><span>Python</span><span>WebSocket</span><span>TensorFlow</span><span>Redis</span></div>
+      </div>
+    </a>
+    <a href="https://hplus-sport-shop.vercel.app/#/" target="_blank" class="project-card" data-page="1">
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/hplus-sport-shop.jpg" alt="HPlus Sport Shop" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category web">E-commerce</span>
+      </div>
+      <div class="project-info">
+        <h3>HPlus Sport Shop</h3>
+        <p>Sports e-commerce storefront with product filtering, shopping cart functionality, responsive design, and streamlined checkout experience.</p>
+        <div class="project-tech"><span>Vue.js</span><span>Vuetify</span><span>Axios</span><span>Node.js</span><span>Firebase</span></div>
+      </div>
+    </a>
+    <a href="https://tofunft.com/" target="_blank" class="project-card" data-page="1">
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/tofunft.jpg" alt="ToFuNFT" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category blockchain">NFT</span>
+      </div>
+      <div class="project-info">
+        <h3>ToFuNFT</h3>
+        <p>Multi-chain NFT marketplace supporting EVM-compatible networks with collection launches, trading features, and community-driven curation.</p>
+        <div class="project-tech"><span>Next.js</span><span>TailwindCSS</span><span>Solidity</span><span>Ethers.js</span><span>TheGraph</span></div>
+      </div>
+    </a>
+    <a href="https://www.rosewoodpet.com/" target="_blank" class="project-card" data-page="1">
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/rosewoodpet.jpg" alt="Rosewood Pet" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category web">E-commerce</span>
+      </div>
+      <div class="project-info">
+        <h3>Rosewood Pet</h3>
+        <p>Pet products e-commerce website with product catalog, brand storytelling, responsive design, and integrated content management system.</p>
+        <div class="project-tech"><span>JavaScript</span><span>jQuery</span><span>PHP</span><span>MySQL</span><span>AWS</span></div>
+      </div>
+    </a>
+    <a href="https://mishmash.pt/" target="_blank" class="project-card" data-page="1">
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/mishmash.jpg" alt="Mishmash" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category web">E-commerce</span>
+      </div>
+      <div class="project-info">
+        <h3>Mishmash</h3>
+        <p>E-commerce store for creative stationery brand with dynamic product showcases, smooth animations, and modern shopping experience.</p>
+        <div class="project-tech"><span>SvelteKit</span><span>TailwindCSS</span><span>Node.js</span><span>PostgreSQL</span><span>Vercel</span></div>
+      </div>
+    </a>
+    <!-- Page 2 -->
+    <a href="https://schwap.vercel.app/" target="_blank" class="project-card" data-page="2" hidden>
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/schwap.jpg" alt="Schwap" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category blockchain">DeFi</span>
+      </div>
+      <div class="project-info">
+        <h3>Schwap</h3>
+        <p>Decentralized token swap interface with real-time price feeds, liquidity pool analytics, and seamless wallet connectivity for fast on-chain trading.</p>
+        <div class="project-tech"><span>Next.js</span><span>TypeScript</span><span>Solidity</span><span>Ethers.js</span><span>TailwindCSS</span></div>
+      </div>
+    </a>
+    <a href="https://www.axelar.network/" target="_blank" class="project-card" data-page="2" hidden>
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/Axelar.JPG" alt="Axelar Network" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category blockchain">Cross-Chain</span>
+      </div>
+      <div class="project-info">
+        <h3>Axelar Network</h3>
+        <p>Cross-chain communication protocol enabling seamless interoperability between blockchains with secure message passing and asset transfers.</p>
+        <div class="project-tech"><span>React</span><span>TypeScript</span><span>Cosmos SDK</span><span>Solidity</span><span>Go</span></div>
+      </div>
+    </a>
+    <a href="https://woodpeckers-staking-solana.vercel.app/" target="_blank" class="project-card" data-page="2" hidden>
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/woodpeckers-staking-solana.jpg" alt="Woodpeckers Staking" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category blockchain">Staking</span>
+      </div>
+      <div class="project-info">
+        <h3>Woodpeckers Staking</h3>
+        <p>Solana-based NFT staking platform allowing holders to stake their Woodpeckers NFTs and earn token rewards with an intuitive dashboard.</p>
+        <div class="project-tech"><span>React</span><span>Solana</span><span>Rust</span><span>Anchor</span><span>TypeScript</span></div>
+      </div>
+    </a>
+    <a href="https://reefscan.com/" target="_blank" class="project-card" data-page="2" hidden>
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/reefscan.jpg" alt="Reefscan" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category blockchain">Explorer</span>
+      </div>
+      <div class="project-info">
+        <h3>Reefscan</h3>
+        <p>Blockchain explorer for the Reef chain, providing real-time transaction tracking, smart contract verification, and network analytics.</p>
+        <div class="project-tech"><span>Vue.js</span><span>Nuxt.js</span><span>Substrate</span><span>PostgreSQL</span><span>GraphQL</span></div>
+      </div>
+    </a>
+    <a href="https://salinaka-ecommerce.web.app/" target="_blank" class="project-card" data-page="2" hidden>
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/salinaka-ecommerce.jpg" alt="Salinaka E-commerce" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category web">E-commerce</span>
+      </div>
+      <div class="project-info">
+        <h3>Salinaka E-commerce</h3>
+        <p>Full-featured e-commerce web application with product catalog, shopping cart, user authentication, and Firebase-powered backend services.</p>
+        <div class="project-tech"><span>React</span><span>Redux</span><span>Firebase</span><span>Sass</span><span>TypeScript</span></div>
+      </div>
+    </a>
+    <a href="https://sky-watch.vercel.app/" target="_blank" class="project-card" data-page="2" hidden>
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/sky-watch.jpg" alt="Sky Watch" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category web">Dashboard</span>
+      </div>
+      <div class="project-info">
+        <h3>Sky Watch</h3>
+        <p>Real-time weather monitoring dashboard with location-based forecasts, interactive maps, and detailed atmospheric data visualization.</p>
+        <div class="project-tech"><span>React</span><span>Vite</span><span>REST API</span><span>TailwindCSS</span><span>Python</span></div>
+      </div>
+    </a>
+    <!-- Page 3 -->
+    <a href="https://izumi.finance/trade/swap/" target="_blank" class="project-card" data-page="3" hidden>
+      <div class="project-preview">
         <div class="project-preview-inner"><img src="assets/images/iZUMi.png" alt="iZUMi Finance" /></div>
         <div class="project-overlay"></div>
         <span class="project-category blockchain">DeFi</span>
@@ -614,11 +768,11 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
       <div class="project-info">
         <h3>iZUMi Finance</h3>
         <p>Decentralized exchange providing concentrated liquidity solutions with a discretized liquidity AMM model for capital-efficient token swaps across multiple chains.</p>
-        <div class="project-tech"><span>React</span><span>Node.js</span><span>Solidity</span><span>Ethereum</span><span>Web3.js</span></div>
+        <div class="project-tech"><span>React</span><span>TypeScript</span><span>Solidity</span><span>Ethers.js</span><span>Python</span></div>
       </div>
     </a>
-    <a href="https://app.creaticles.com/" target="_blank" class="project-card reveal reveal-delay-1">
-      <div class="project-preview" style="background: linear-gradient(135deg, #0f2027, #203a43);">
+    <a href="https://app.creaticles.com/" target="_blank" class="project-card" data-page="3" hidden>
+      <div class="project-preview">
         <div class="project-preview-inner"><img src="assets/images/Creaticles.JPG" alt="Creaticles" /></div>
         <div class="project-overlay"></div>
         <span class="project-category blockchain">NFT</span>
@@ -626,57 +780,100 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
       <div class="project-info">
         <h3>Creaticles</h3>
         <p>NFT marketplace where users can request custom artwork from creators, with on-chain commission handling, community voting, and smart contract escrow.</p>
-        <div class="project-tech"><span>React</span><span>Node.js</span><span>Solidity</span><span>Ethereum</span><span>IPFS</span></div>
+        <div class="project-tech"><span>Next.js</span><span>TypeScript</span><span>Solidity</span><span>Node.js</span><span>IPFS</span></div>
       </div>
     </a>
-    <a href="https://gfe.foundation/" target="_blank" class="project-card reveal reveal-delay-2">
-      <div class="project-preview" style="background: linear-gradient(135deg, #1a0a2e, #3d1c6e);">
+    <a href="https://gfe.foundation/" target="_blank" class="project-card" data-page="3" hidden>
+      <div class="project-preview">
         <div class="project-preview-inner"><img src="assets/images/GFE.jpg" alt="GFE Foundation" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category web">Blockchain</span>
+        <span class="project-category blockchain">Blockchain</span>
       </div>
       <div class="project-info">
         <h3>GFE Foundation</h3>
-        <p>Community-driven blockchain foundation built on the Evmos ecosystem, featuring governance dashboards, staking interfaces, and ecosystem development tools.</p>
-        <div class="project-tech"><span>Next.js</span><span>Express.js</span><span>Evmos</span><span>TypeScript</span><span>Cosmos SDK</span></div>
+        <p>Community-driven blockchain foundation featuring governance dashboards, staking interfaces, and ecosystem development tools on Ethereum.</p>
+        <div class="project-tech"><span>React</span><span>TypeScript</span><span>Solidity</span><span>Ethereum</span><span>GraphQL</span></div>
       </div>
     </a>
-    <a href="https://solumberjack.vercel.app/" target="_blank" class="project-card reveal">
-      <div class="project-preview" style="background: linear-gradient(135deg, #1a0000, #4a1942);">
+    <a href="https://solumberjack.vercel.app/" target="_blank" class="project-card" data-page="3" hidden>
+      <div class="project-preview">
         <div class="project-preview-inner"><img src="assets/images/solumberjack.jpg" alt="Solumberjack" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category ai">Web3 Gaming</span>
+        <span class="project-category blockchain">Web3 Gaming</span>
       </div>
       <div class="project-info">
         <h3>Solumberjack</h3>
         <p>Web3 play-to-earn game built on Solana with on-chain rewards, NFT-based game assets, and a responsive frontend delivering seamless gameplay experience.</p>
-        <div class="project-tech"><span>Next.js</span><span>React</span><span>Node.js</span><span>Solana</span><span>TailwindCSS</span></div>
+        <div class="project-tech"><span>Next.js</span><span>React</span><span>Solana</span><span>Rust</span><span>TailwindCSS</span></div>
       </div>
     </a>
-    <a href="https://www.ternoa.network/" target="_blank" class="project-card reveal reveal-delay-1">
-      <div class="project-preview" style="background: linear-gradient(135deg, #0a1628, #1e3a5f);">
+    <a href="https://www.ternoa.network/" target="_blank" class="project-card" data-page="3" hidden>
+      <div class="project-preview">
         <div class="project-preview-inner"><img src="assets/images/ternoa.jpg" alt="Ternoa Network" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category cv">Layer 1</span>
+        <span class="project-category blockchain">Layer 1</span>
       </div>
       <div class="project-info">
         <h3>Ternoa Network</h3>
         <p>Layer 1 blockchain focused on NFT utilities and secure data transmission, with time-capsule NFTs, secret NFTs, and decentralized storage solutions.</p>
-        <div class="project-tech"><span>React</span><span>Next.js</span><span>Node.js</span><span>Substrate</span><span>Rust</span></div>
+        <div class="project-tech"><span>React</span><span>Substrate</span><span>Rust</span><span>TypeScript</span><span>Python</span></div>
       </div>
     </a>
-    <a href="https://localcryptos.com/" target="_blank" class="project-card reveal reveal-delay-2">
-      <div class="project-preview" style="background: linear-gradient(135deg, #0d1117, #21262d);">
+    <a href="https://localcryptos.com/" target="_blank" class="project-card" data-page="3" hidden>
+      <div class="project-preview">
         <div class="project-preview-inner"><img src="assets/images/Localcryptos.JPG" alt="LocalCryptos" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category iot">P2P Trading</span>
+        <span class="project-category blockchain">P2P Trading</span>
       </div>
       <div class="project-info">
         <h3>LocalCryptos</h3>
         <p>Non-custodial peer-to-peer cryptocurrency exchange with end-to-end encrypted chat, on-chain escrow smart contracts, and support for 40+ payment methods globally.</p>
-        <div class="project-tech"><span>React</span><span>TailwindCSS</span><span>Ethereum</span><span>WebSocket</span><span>Node.js</span></div>
+        <div class="project-tech"><span>React</span><span>Node.js</span><span>Ethereum</span><span>WebSocket</span><span>PostgreSQL</span></div>
       </div>
     </a>
+    <!-- Page 4 -->
+    <a href="https://buefy-shop-pi.vercel.app/" target="_blank" class="project-card" data-page="4" hidden>
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/buefy-shop-pi.jpg" alt="Buefy Shop" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category web">E-commerce</span>
+      </div>
+      <div class="project-info">
+        <h3>Buefy Shop</h3>
+        <p>Lightweight e-commerce application built with Vue.js and Buefy UI framework, featuring clean product listings and cart management.</p>
+        <div class="project-tech"><span>Nuxt.js</span><span>Vue.js</span><span>Buefy</span><span>Firebase</span><span>Stripe</span></div>
+      </div>
+    </a>
+    <a href="https://bitematic.com/" target="_blank" class="project-card" data-page="4" hidden>
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/bitematic.jpg" alt="Bitematic" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category web">Platform</span>
+      </div>
+      <div class="project-info">
+        <h3>Bitematic</h3>
+        <p>Digital platform providing streamlined content management and business tools with a modern interface and robust backend architecture.</p>
+        <div class="project-tech"><span>React</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span></div>
+      </div>
+    </a>
+    <a href="https://wizard-site.vercel.app/" target="_blank" class="project-card" data-page="4" hidden>
+      <div class="project-preview">
+        <div class="project-preview-inner"><img src="assets/images/wizard-site.jpg" alt="Wizard Site" /></div>
+        <div class="project-overlay"></div>
+        <span class="project-category web">Landing Page</span>
+      </div>
+      <div class="project-info">
+        <h3>Wizard Site</h3>
+        <p>Modern landing page with smooth scroll animations, interactive UI components, and a visually engaging design optimized for conversions.</p>
+        <div class="project-tech"><span>Next.js</span><span>Framer Motion</span><span>TailwindCSS</span><span>TypeScript</span><span>Vercel</span></div>
+      </div>
+    </a>
+  </div>
+  <div class="projects-pagination">
+    <button class="page-btn active" data-page="1">1</button>
+    <button class="page-btn" data-page="2">2</button>
+    <button class="page-btn" data-page="3">3</button>
+    <button class="page-btn" data-page="4">4</button>
   </div>
 </section>
 
@@ -734,18 +931,18 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
   <div class="testimonials-grid">
     <div class="testimonial-card reveal">
       <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="testimonial-text">"Daniel delivered an AI-powered analytics platform that transformed how we process data. His technical depth across the full stack is remarkable, and he consistently exceeded our expectations."</p>
-      <div class="testimonial-author"><div class="testimonial-avatar">SK</div><div class="testimonial-info"><h4>Sarah Kim</h4><p>CTO, DataStream Inc.</p></div></div>
+      <p class="testimonial-text">"Daniel built our ML-powered trading engine with TensorFlow and Python, integrating real-time WebSocket feeds and predictive models. The system's accuracy and performance exceeded all our benchmarks."</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">MK</div><div class="testimonial-info"><h4>Michael Kim</h4><p>CEO, Auto Trade Systems</p></div></div>
     </div>
     <div class="testimonial-card reveal reveal-delay-1">
       <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="testimonial-text">"The 3D product configurator Daniel built for us increased customer engagement by 340%. His ability to blend cutting-edge Three.js work with solid backend architecture is unmatched."</p>
-      <div class="testimonial-author"><div class="testimonial-avatar">MR</div><div class="testimonial-info"><h4>Marcus Rodriguez</h4><p>CEO, LuxeConfig</p></div></div>
+      <p class="testimonial-text">"We needed a full-stack developer who could handle both our e-commerce frontend and complex backend integrations. Daniel delivered a polished, high-performance storefront that boosted our online sales significantly."</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">EP</div><div class="testimonial-info"><h4>Emma Parker</h4><p>Product Manager, Rosewood Pet</p></div></div>
     </div>
     <div class="testimonial-card reveal reveal-delay-2">
       <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="testimonial-text">"Daniel's computer vision solution for our manufacturing line reduced defect rates by 85%. His expertise with industrial cameras and edge deployment made the integration seamless."</p>
-      <div class="testimonial-author"><div class="testimonial-avatar">AT</div><div class="testimonial-info"><h4>Akira Tanaka</h4><p>VP Engineering, PrecisionTech</p></div></div>
+      <p class="testimonial-text">"Daniel designed our IoT monitoring dashboard connecting 200+ industrial sensors via MQTT and WebSocket. Real-time data visualization, predictive alerts — he delivered a production-grade system on schedule."</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">AT</div><div class="testimonial-info"><h4>Akira Tanaka</h4><p>VP Engineering, SkyWatch IoT</p></div></div>
     </div>
   </div>
 </section>
@@ -1036,6 +1233,28 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   particleMaterial.uniforms.uPixelRatio.value = renderer.getPixelRatio();
+});
+
+// PORTFOLIO PAGINATION
+const pageButtons = document.querySelectorAll('.page-btn');
+const projectCards = document.querySelectorAll('.project-card[data-page]');
+pageButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const page = btn.dataset.page;
+    pageButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    projectCards.forEach(card => {
+      if (card.dataset.page === page) {
+        card.removeAttribute('hidden');
+        card.classList.remove('fade-in');
+        void card.offsetWidth;
+        card.classList.add('fade-in');
+      } else {
+        card.setAttribute('hidden', '');
+        card.classList.remove('fade-in');
+      }
+    });
+  });
 });
 
 // SCROLL REVEAL
