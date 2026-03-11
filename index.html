@@ -193,11 +193,12 @@ nav.scrolled { border-bottom-color: var(--border-subtle); background: rgba(10,10
 /* PROJECTS */
 .projects-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px; }
 @media (max-width: 480px) { .projects-grid { grid-template-columns: 1fr; } }
-.project-card { border-radius: var(--radius-lg); background: var(--bg-card); border: 1px solid var(--border-subtle); overflow: hidden; transition: all var(--transition-smooth); }
+.project-card { display: block; text-decoration: none; color: inherit; border-radius: var(--radius-lg); background: var(--bg-card); border: 1px solid var(--border-subtle); overflow: hidden; transition: all var(--transition-smooth); cursor: pointer; }
 .project-card:hover { transform: translateY(-8px); border-color: var(--border-active); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
 .project-preview { height: 220px; position: relative; overflow: hidden; background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary)); }
-.project-preview-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem; opacity: 0.4; transition: all var(--transition-smooth); }
-.project-card:hover .project-preview-inner { opacity: 0.7; transform: scale(1.05); }
+.project-preview-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem; opacity: 0.85; transition: all var(--transition-smooth); }
+.project-preview-inner img { width: 100%; height: 100%; object-fit: cover; }
+.project-card:hover .project-preview-inner { opacity: 1; transform: scale(1.05); }
 .project-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,15,0.9), transparent); }
 .project-category { position: absolute; top: 16px; left: 16px; padding: 6px 14px; border-radius: 100px; font-size: 0.7rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
 .project-category.ai { background: rgba(34,211,238,0.15); color: var(--accent-cyan); }
@@ -210,11 +211,6 @@ nav.scrolled { border-bottom-color: var(--border-subtle); background: rgba(10,10
 .project-info p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px; }
 .project-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .project-tech span { padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; font-weight: 500; background: var(--bg-tertiary); color: var(--text-muted); }
-.project-links { display: flex; gap: 12px; }
-.project-link { padding: 8px 18px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border-subtle); transition: all var(--transition-fast); display: flex; align-items: center; gap: 6px; }
-.project-link:hover { border-color: var(--accent-primary); background: rgba(99,102,241,0.06); }
-.project-link.primary { background: var(--accent-primary); border-color: var(--accent-primary); color: #fff; }
-.project-link.primary:hover { background: var(--accent-secondary); }
 
 /* EXPERIENCE */
 #experience { background: var(--bg-secondary); }
@@ -609,84 +605,78 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
     <p class="section-desc">A curated selection of projects showcasing expertise across AI, web development, blockchain, computer vision, and immersive 3D.</p>
   </div>
   <div class="projects-grid">
-    <div class="project-card reveal">
+    <a href="https://izumi.finance/trade/swap/" target="_blank" class="project-card reveal">
       <div class="project-preview" style="background: linear-gradient(135deg, #1a1040, #2d1b69);">
-        <div class="project-preview-inner"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"><path d="M12 2a10 10 0 0110 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="project-preview-inner"><img src="assets/images/iZUMi.png" alt="iZUMi Finance" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category ai">AI / LLM</span>
+        <span class="project-category blockchain">DeFi</span>
       </div>
       <div class="project-info">
-        <h3>NeuralDoc AI Platform</h3>
-        <p>Enterprise-grade RAG platform with multi-model LLM orchestration, semantic search, and automated document intelligence for legal and financial sectors.</p>
-        <div class="project-tech"><span>Python</span><span>LangChain</span><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span></div>
-        <div class="project-links"><a href="#" class="project-link primary">Live Demo</a><a href="#" class="project-link">Source Code</a></div>
+        <h3>iZUMi Finance</h3>
+        <p>Decentralized exchange providing concentrated liquidity solutions with a discretized liquidity AMM model for capital-efficient token swaps across multiple chains.</p>
+        <div class="project-tech"><span>React</span><span>Node.js</span><span>Solidity</span><span>Ethereum</span><span>Web3.js</span></div>
       </div>
-    </div>
-    <div class="project-card reveal reveal-delay-1">
+    </a>
+    <a href="https://app.creaticles.com/" target="_blank" class="project-card reveal reveal-delay-1">
       <div class="project-preview" style="background: linear-gradient(135deg, #0f2027, #203a43);">
-        <div class="project-preview-inner"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="project-preview-inner"><img src="assets/images/Creaticles.JPG" alt="Creaticles" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category cv">Computer Vision</span>
+        <span class="project-category blockchain">NFT</span>
       </div>
       <div class="project-info">
-        <h3>VisionGuard Industrial</h3>
-        <p>Real-time defect detection system using industrial cameras with custom-trained YOLO models, achieving 99.4% accuracy on a semiconductor manufacturing line.</p>
-        <div class="project-tech"><span>Python</span><span>OpenCV</span><span>YOLOv8</span><span>C++</span><span>MQTT</span><span>Edge AI</span></div>
-        <div class="project-links"><a href="#" class="project-link primary">Case Study</a><a href="#" class="project-link">Architecture</a></div>
+        <h3>Creaticles</h3>
+        <p>NFT marketplace where users can request custom artwork from creators, with on-chain commission handling, community voting, and smart contract escrow.</p>
+        <div class="project-tech"><span>React</span><span>Node.js</span><span>Solidity</span><span>Ethereum</span><span>IPFS</span></div>
       </div>
-    </div>
-    <div class="project-card reveal reveal-delay-2">
+    </a>
+    <a href="https://gfe.foundation/" target="_blank" class="project-card reveal reveal-delay-2">
       <div class="project-preview" style="background: linear-gradient(135deg, #1a0a2e, #3d1c6e);">
-        <div class="project-preview-inner"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="project-preview-inner"><img src="assets/images/GFE.jpg" alt="GFE Foundation" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category web">3D Web</span>
+        <span class="project-category web">Blockchain</span>
       </div>
       <div class="project-info">
-        <h3>Immersive 3D Product Configurator</h3>
-        <p>WebGL-powered 3D product customization platform with real-time material and lighting adjustments, AR preview, and seamless e-commerce integration.</p>
-        <div class="project-tech"><span>Three.js</span><span>React</span><span>GLSL</span><span>Next.js</span><span>WebXR</span><span>Stripe</span></div>
-        <div class="project-links"><a href="#" class="project-link primary">Live Demo</a><a href="#" class="project-link">Source Code</a></div>
+        <h3>GFE Foundation</h3>
+        <p>Community-driven blockchain foundation built on the Evmos ecosystem, featuring governance dashboards, staking interfaces, and ecosystem development tools.</p>
+        <div class="project-tech"><span>Next.js</span><span>Express.js</span><span>Evmos</span><span>TypeScript</span><span>Cosmos SDK</span></div>
       </div>
-    </div>
-    <div class="project-card reveal">
+    </a>
+    <a href="https://solumberjack.vercel.app/" target="_blank" class="project-card reveal">
       <div class="project-preview" style="background: linear-gradient(135deg, #1a0000, #4a1942);">
-        <div class="project-preview-inner"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></div>
+        <div class="project-preview-inner"><img src="assets/images/solumberjack.jpg" alt="Solumberjack" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category blockchain">Blockchain</span>
+        <span class="project-category ai">Web3 Gaming</span>
       </div>
       <div class="project-info">
-        <h3>DeFi Yield Aggregator</h3>
-        <p>Cross-chain DeFi protocol optimizing yield farming strategies with automated vault management, governance tokens, and comprehensive analytics dashboard.</p>
-        <div class="project-tech"><span>Solidity</span><span>React</span><span>Ethers.js</span><span>Hardhat</span><span>The Graph</span></div>
-        <div class="project-links"><a href="#" class="project-link primary">Live DApp</a><a href="#" class="project-link">Smart Contracts</a></div>
+        <h3>Solumberjack</h3>
+        <p>Web3 play-to-earn game built on Solana with on-chain rewards, NFT-based game assets, and a responsive frontend delivering seamless gameplay experience.</p>
+        <div class="project-tech"><span>Next.js</span><span>React</span><span>Node.js</span><span>Solana</span><span>TailwindCSS</span></div>
       </div>
-    </div>
-    <div class="project-card reveal reveal-delay-1">
+    </a>
+    <a href="https://www.ternoa.network/" target="_blank" class="project-card reveal reveal-delay-1">
       <div class="project-preview" style="background: linear-gradient(135deg, #0a1628, #1e3a5f);">
-        <div class="project-preview-inner"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/></svg></div>
+        <div class="project-preview-inner"><img src="assets/images/ternoa.jpg" alt="Ternoa Network" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category iot">IoT / Hardware</span>
+        <span class="project-category cv">Layer 1</span>
       </div>
       <div class="project-info">
-        <h3>SmartFactory Monitor</h3>
-        <p>End-to-end IoT monitoring platform connecting 200+ industrial sensors with real-time dashboards, predictive maintenance alerts, and automated reporting.</p>
-        <div class="project-tech"><span>Node.js</span><span>MQTT</span><span>React</span><span>TimescaleDB</span><span>Docker</span><span>WebSocket</span></div>
-        <div class="project-links"><a href="#" class="project-link primary">Case Study</a><a href="#" class="project-link">Architecture</a></div>
+        <h3>Ternoa Network</h3>
+        <p>Layer 1 blockchain focused on NFT utilities and secure data transmission, with time-capsule NFTs, secret NFTs, and decentralized storage solutions.</p>
+        <div class="project-tech"><span>React</span><span>Next.js</span><span>Node.js</span><span>Substrate</span><span>Rust</span></div>
       </div>
-    </div>
-    <div class="project-card reveal reveal-delay-2">
+    </a>
+    <a href="https://localcryptos.com/" target="_blank" class="project-card reveal reveal-delay-2">
       <div class="project-preview" style="background: linear-gradient(135deg, #0d1117, #21262d);">
-        <div class="project-preview-inner"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div class="project-preview-inner"><img src="assets/images/Localcryptos.JPG" alt="LocalCryptos" /></div>
         <div class="project-overlay"></div>
-        <span class="project-category web">Full Stack</span>
+        <span class="project-category iot">P2P Trading</span>
       </div>
       <div class="project-info">
-        <h3>Enterprise SaaS Platform</h3>
-        <p>Multi-tenant SaaS application with role-based access, real-time collaboration, Stripe billing, and comprehensive admin dashboard serving 10K+ active users.</p>
-        <div class="project-tech"><span>Next.js</span><span>NestJS</span><span>PostgreSQL</span><span>Redis</span><span>AWS</span><span>Stripe</span></div>
-        <div class="project-links"><a href="#" class="project-link primary">Live Product</a><a href="#" class="project-link">Case Study</a></div>
+        <h3>LocalCryptos</h3>
+        <p>Non-custodial peer-to-peer cryptocurrency exchange with end-to-end encrypted chat, on-chain escrow smart contracts, and support for 40+ payment methods globally.</p>
+        <div class="project-tech"><span>React</span><span>TailwindCSS</span><span>Ethereum</span><span>WebSocket</span><span>Node.js</span></div>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
