@@ -79,7 +79,8 @@ nav {
 }
 nav.scrolled { border-bottom-color: var(--border-subtle); background: rgba(10,10,15,0.92); }
 .nav-logo { font-family: var(--font-primary); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
-.nav-logo-icon { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 800; color: #fff; }
+.nav-logo-icon { width: 36px; height: 36px; border-radius: 50%; overflow: hidden; border: 2px solid var(--accent-primary); }
+.nav-logo-icon img { width: 100%; height: 100%; object-fit: cover; }
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); position: relative; padding: 4px 0; transition: color var(--transition-fast); }
 .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--accent-primary); border-radius: 1px; transition: width var(--transition-smooth); }
@@ -100,6 +101,11 @@ nav.scrolled { border-bottom-color: var(--border-subtle); background: rgba(10,10
 /* HERO */
 #hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
 #hero-canvas { position: absolute; inset: 0; z-index: 1; }
+.hero-selfie { position: absolute; z-index: 1; top: 50%; right: 30%; transform: translateY(-50%); width: 420px; height: auto; pointer-events: none; animation: selfieFloat 6s ease-in-out infinite, selfieFadeIn 1.5s ease forwards; opacity: 0; -webkit-mask-image: radial-gradient(ellipse 80% 70% at center 45%, black 40%, transparent 75%); mask-image: radial-gradient(ellipse 80% 70% at center 45%, black 40%, transparent 75%); }
+.hero-selfie img { width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 0 40px rgba(99,102,241,0.4)) drop-shadow(0 0 80px rgba(139,92,246,0.2)) brightness(0.9); }
+@keyframes selfieFloat { 0%, 100% { transform: translateY(-50%) translateX(0); } 50% { transform: translateY(-52%) translateX(5px); } }
+@keyframes selfieFadeIn { from { opacity: 0; transform: translateY(-48%) scale(0.95); } to { opacity: 0.85; transform: translateY(-50%) scale(1); } }
+@media (max-width: 900px) { .hero-selfie { right: 50%; width: 280px; transform: translate(50%, -50%); opacity: 0.3; } }
 .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 48px; }
 .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 100px; background: rgba(99,102,241,0.1); border: 1px solid var(--border-subtle); font-size: 0.8rem; font-weight: 500; color: var(--accent-tertiary); margin-bottom: 28px; animation: fadeInUp 0.8s ease forwards; opacity: 0; }
 .hero-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-emerald); animation: pulse-dot 2s ease infinite; }
@@ -312,7 +318,7 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
 <!-- Navigation -->
 <nav id="navbar">
   <a href="#hero" class="nav-logo">
-    <div class="nav-logo-icon">D</div>
+    <div class="nav-logo-icon"><img src="assets/images/selfie.png" alt="Daniel Sun"></div>
     <span>Daniel</span>
   </a>
   <ul class="nav-links">
@@ -344,6 +350,7 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
 <!-- HERO -->
 <section id="hero">
   <canvas id="hero-canvas"></canvas>
+  <div class="hero-selfie"><img src="assets/images/selfie.png" alt=""></div>
   <div class="hero-content">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
@@ -357,7 +364,7 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
     <p class="hero-subtitle">
       Senior Full Stack AI Engineer crafting immersive digital experiences
       at the intersection of modern web technologies, artificial intelligence,
-      computer vision, and blockchain innovation.
+      computer vision, IoT, and blockchain innovation.
     </p>
     <div class="hero-actions">
       <button class="btn-primary" onclick="location.href='#projects'">
@@ -881,7 +888,7 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
   <div class="timeline">
     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2022 &mdash; Present</div>
+      <div class="timeline-date">2022 &mdash; 2025</div>
       <div class="timeline-role">Senior Full Stack AI Engineer</div>
       <div class="timeline-company">Independent / Contract</div>
       <div class="timeline-desc">Leading end-to-end development of AI-powered platforms, 3D web experiences, and blockchain solutions for global clients. Architecting scalable systems processing millions of requests.</div>
