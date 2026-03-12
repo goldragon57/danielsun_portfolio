@@ -7,6 +7,7 @@
 <meta name="description" content="Senior Full Stack AI Engineer specializing in 3D Web, Computer Vision, Machine Learning, Blockchain, and Modern Web Technologies.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -194,6 +195,8 @@ nav.scrolled { border-bottom-color: var(--border-subtle); background: rgba(10,10
 .tech-dot.ai { background: var(--accent-cyan); }
 .tech-dot.devops { background: var(--accent-amber); }
 .tech-dot.blockchain { background: var(--accent-rose); }
+.tech-item i { font-size: 1.1rem; flex-shrink: 0; }
+.tech-item i:not(.colored) { color: var(--text-secondary); }
 
 /* PROJECTS */
 .projects-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px; }
@@ -533,43 +536,43 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
     <div class="tech-category reveal">
       <h3>Frontend & UI</h3>
       <div class="tech-items">
-        <div class="tech-item"><span class="tech-dot frontend"></span>HTML5 / CSS3</div>
-        <div class="tech-item"><span class="tech-dot frontend"></span>JavaScript (ES2024+)</div>
-        <div class="tech-item"><span class="tech-dot frontend"></span>TypeScript</div>
-        <div class="tech-item"><span class="tech-dot frontend"></span>React.js</div>
-        <div class="tech-item"><span class="tech-dot frontend"></span>Next.js</div>
-        <div class="tech-item"><span class="tech-dot frontend"></span>Vue.js</div>
-        <div class="tech-item"><span class="tech-dot frontend"></span>Three.js / WebGL</div>
-        <div class="tech-item"><span class="tech-dot frontend"></span>GSAP / Framer Motion</div>
-        <div class="tech-item"><span class="tech-dot frontend"></span>Tailwind CSS</div>
-        <div class="tech-item"><span class="tech-dot frontend"></span>SASS / SCSS</div>
+        <div class="tech-item"><i class="devicon-html5-plain colored"></i>HTML5 / CSS3</div>
+        <div class="tech-item"><i class="devicon-javascript-plain colored"></i>JavaScript (ES2024+)</div>
+        <div class="tech-item"><i class="devicon-typescript-plain colored"></i>TypeScript</div>
+        <div class="tech-item"><i class="devicon-react-original colored"></i>React.js</div>
+        <div class="tech-item"><i class="devicon-nextjs-plain"></i>Next.js</div>
+        <div class="tech-item"><i class="devicon-vuejs-plain colored"></i>Vue.js</div>
+        <div class="tech-item"><i class="devicon-threejs-original"></i>Three.js / WebGL</div>
+        <div class="tech-item"><i class="devicon-framermotion-original"></i>GSAP / Framer Motion</div>
+        <div class="tech-item"><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</div>
+        <div class="tech-item"><i class="devicon-sass-original colored"></i>SASS / SCSS</div>
       </div>
     </div>
     <div class="tech-category reveal reveal-delay-1">
       <h3>Backend & APIs</h3>
       <div class="tech-items">
-        <div class="tech-item"><span class="tech-dot backend"></span>Node.js</div>
-        <div class="tech-item"><span class="tech-dot backend"></span>NestJS</div>
-        <div class="tech-item"><span class="tech-dot backend"></span>Express.js</div>
-        <div class="tech-item"><span class="tech-dot backend"></span>Python</div>
-        <div class="tech-item"><span class="tech-dot backend"></span>Django / DRF</div>
-        <div class="tech-item"><span class="tech-dot backend"></span>FastAPI</div>
-        <div class="tech-item"><span class="tech-dot backend"></span>C# / .NET</div>
-        <div class="tech-item"><span class="tech-dot backend"></span>Laravel / PHP</div>
-        <div class="tech-item"><span class="tech-dot backend"></span>WordPress</div>
-        <div class="tech-item"><span class="tech-dot backend"></span>GraphQL</div>
+        <div class="tech-item"><i class="devicon-nodejs-plain colored"></i>Node.js</div>
+        <div class="tech-item"><i class="devicon-nestjs-original colored"></i>NestJS</div>
+        <div class="tech-item"><i class="devicon-express-original"></i>Express.js</div>
+        <div class="tech-item"><i class="devicon-python-plain colored"></i>Python</div>
+        <div class="tech-item"><i class="devicon-django-plain colored"></i>Django / DRF</div>
+        <div class="tech-item"><i class="devicon-fastapi-plain colored"></i>FastAPI</div>
+        <div class="tech-item"><i class="devicon-csharp-plain colored"></i>C# / .NET</div>
+        <div class="tech-item"><i class="devicon-laravel-original colored"></i>Laravel / PHP</div>
+        <div class="tech-item"><i class="devicon-wordpress-plain colored"></i>WordPress</div>
+        <div class="tech-item"><i class="devicon-graphql-plain colored"></i>GraphQL</div>
         <div class="tech-item"><span class="tech-dot backend"></span>REST APIs</div>
       </div>
     </div>
     <div class="tech-category reveal reveal-delay-2">
       <h3>AI / ML & Data Science</h3>
       <div class="tech-items">
-        <div class="tech-item"><span class="tech-dot ai"></span>PyTorch</div>
-        <div class="tech-item"><span class="tech-dot ai"></span>TensorFlow / Keras</div>
+        <div class="tech-item"><i class="devicon-pytorch-original colored"></i>PyTorch</div>
+        <div class="tech-item"><i class="devicon-tensorflow-original colored"></i>TensorFlow / Keras</div>
         <div class="tech-item"><span class="tech-dot ai"></span>LangChain / LLM</div>
-        <div class="tech-item"><span class="tech-dot ai"></span>OpenCV</div>
-        <div class="tech-item"><span class="tech-dot ai"></span>Scikit-learn</div>
-        <div class="tech-item"><span class="tech-dot ai"></span>Pandas / NumPy</div>
+        <div class="tech-item"><i class="devicon-opencv-plain colored"></i>OpenCV</div>
+        <div class="tech-item"><i class="devicon-scikitlearn-plain colored"></i>Scikit-learn</div>
+        <div class="tech-item"><i class="devicon-pandas-original colored"></i>Pandas / NumPy</div>
         <div class="tech-item"><span class="tech-dot ai"></span>YOLO / SAM</div>
         <div class="tech-item"><span class="tech-dot ai"></span>Hugging Face</div>
         <div class="tech-item"><span class="tech-dot ai"></span>RAG Pipelines</div>
@@ -579,9 +582,9 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
     <div class="tech-category reveal">
       <h3>Blockchain & Web3</h3>
       <div class="tech-items">
-        <div class="tech-item"><span class="tech-dot blockchain"></span>Solidity</div>
+        <div class="tech-item"><i class="devicon-solidity-plain"></i>Solidity</div>
         <div class="tech-item"><span class="tech-dot blockchain"></span>Ethereum / EVM</div>
-        <div class="tech-item"><span class="tech-dot blockchain"></span>Hardhat / Foundry</div>
+        <div class="tech-item"><i class="devicon-hardhat-plain colored"></i>Hardhat / Foundry</div>
         <div class="tech-item"><span class="tech-dot blockchain"></span>Web3.js / Ethers.js</div>
         <div class="tech-item"><span class="tech-dot blockchain"></span>IPFS</div>
         <div class="tech-item"><span class="tech-dot blockchain"></span>The Graph</div>
@@ -590,14 +593,14 @@ footer { padding: 48px 48px 32px; border-top: 1px solid var(--border-subtle); ba
     <div class="tech-category reveal reveal-delay-1">
       <h3>DevOps & Cloud</h3>
       <div class="tech-items">
-        <div class="tech-item"><span class="tech-dot devops"></span>Docker / K8s</div>
-        <div class="tech-item"><span class="tech-dot devops"></span>AWS / GCP / Azure</div>
+        <div class="tech-item"><i class="devicon-docker-plain colored"></i>Docker / K8s</div>
+        <div class="tech-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i>AWS / GCP / Azure</div>
         <div class="tech-item"><span class="tech-dot devops"></span>CI/CD Pipelines</div>
-        <div class="tech-item"><span class="tech-dot devops"></span>PostgreSQL / MongoDB</div>
-        <div class="tech-item"><span class="tech-dot devops"></span>Redis</div>
-        <div class="tech-item"><span class="tech-dot devops"></span>Nginx / Apache</div>
-        <div class="tech-item"><span class="tech-dot devops"></span>Vercel / Railway</div>
-        <div class="tech-item"><span class="tech-dot devops"></span>Git / GitHub Actions</div>
+        <div class="tech-item"><i class="devicon-postgresql-plain colored"></i>PostgreSQL / MongoDB</div>
+        <div class="tech-item"><i class="devicon-redis-plain colored"></i>Redis</div>
+        <div class="tech-item"><i class="devicon-nginx-original colored"></i>Nginx / Apache</div>
+        <div class="tech-item"><i class="devicon-vercel-plain"></i>Vercel / Railway</div>
+        <div class="tech-item"><i class="devicon-git-plain colored"></i>Git / GitHub Actions</div>
       </div>
     </div>
   </div>
